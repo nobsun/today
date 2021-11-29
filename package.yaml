@@ -27,6 +27,9 @@ dependencies:
 - time
 - arithmoi
 
+library:
+  source-dirs:          src
+
 executables:
   today:
     main:                Main.hs
@@ -35,7 +38,8 @@ executables:
     - -rtsopts
     # - -threaded
     # - -with-rtsopts=-N
-    # dependencies:
+    dependencies:
+    - today
 
 tests:
   today-test:
@@ -46,7 +50,7 @@ tests:
     # - -rtsopts
     # - -with-rtsopts=-N
     dependencies:
-    # - today
+    - today
     - hspec
     - main-tester
 
