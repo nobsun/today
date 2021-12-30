@@ -26,15 +26,22 @@ showFactor (n,p) = case p of
 
 countPrimeDays :: Integer -> Int
 countPrimeDays year
-    = length
-    $ filter isPrimeNum
-    $ map (readInteger . filter isDigit . showGregorian)
-    $ [fromGregorian year 1 1 .. fromGregorian year 12 31]
+    = length $ primeDays year
+
+primeDays :: Integer -> [Integer]
+primeDays year = filter isPrimeNum $ yearDays year
+
+yearDays :: Integer -> [Integer]
+yearDays year = map (readInteger . filter isDigit . showGregorian)
+    [fromGregorian year 1 1 .. fromGregorian year 12 31]
 
 isPrimeNum :: Integer -> Bool
 isPrimeNum n = case factorise n of
     [(_,1)] -> True
     _       -> False 
+
+isProdOfTwoPrimes :: Integer -> Bool
+isProdOfTwoPrimes n = length (factorise n) == 2
 
 readInteger :: String -> Integer
 readInteger = read
