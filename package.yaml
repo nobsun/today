@@ -40,6 +40,11 @@ executables:
     # - -with-rtsopts=-N
     dependencies:
     - today
+  pdays:
+    main:                Main.hs
+    source-dirs:         app/pdays
+    dependencies:
+    - today
 
 tests:
   today-test:

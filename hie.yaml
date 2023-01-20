@@ -1,2 +1,19 @@
 cradle:
   stack:
+    - path: "./test/spec.hs"
+    component: "today:test:today-test"
+  
+    - path: "./test/LibSpec.hs"
+    component: "today:test:today-test"
+  
+    - path: "./test/doctests.hs"
+    component: "today:test:today-doctest"
+
+    - path: "./app/Main.hs"
+    component: "today:exe:today"
+
+    - path: "./app/pdays/Main.hs"
+    component: "today:exe:pdays"
+
+    - path: "./src/Lib.hs"
+    component: "today:lib"
