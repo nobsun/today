@@ -1,5 +1,5 @@
 name:                today
-version:             0.1.0.0
+version:             0.1.1.0
 github:              "nobsun/today"
 license:             BSD3
 author:              "Nobuo Yamashita"
@@ -40,6 +40,37 @@ executables:
     # - -with-rtsopts=-N
     dependencies:
     - today
+
+  todayw:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -rtsopts
+    # - -threaded
+    # - -with-rtsopts=-N
+    dependencies:
+    - today
+
+  todayo:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -rtsopts
+    # - -threaded
+    # - -with-rtsopts=-N
+    dependencies:
+    - today
+
+  todayp:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -rtsopts
+    # - -threaded
+    # - -with-rtsopts=-N
+    dependencies:
+    - today
+
   pdays:
     main:                Main.hs
     source-dirs:         app/pdays
