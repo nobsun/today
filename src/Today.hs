@@ -13,8 +13,8 @@ today showDate = putStrLn . showDate . localDay
 showPrimeDate :: Day -> String
 showPrimeDate d = case filter isDigit (showGregorian d) of
     ds -> case factorise (read ds :: Integer) of
-        [(_, 1)] -> ds ++ " : Today's date is a prime number."
-        fs       -> ds ++ " = " ++ showFactors fs ++ " : Today's date has " ++ show n ++ " divisors."
+        [(_, 1)] -> ds ++ " : 今日の日付は素数だね"
+        fs       -> ds ++ " = " ++ showFactors fs ++ " : 今日の日付は合成数で約数は" ++ show n ++ "個あるね"
             where
                 n = foldr (\ (_,x) a -> succ x * a) 1 fs
 
