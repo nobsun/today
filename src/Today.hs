@@ -14,7 +14,7 @@ showPrimeDate :: Day -> String
 showPrimeDate d = case filter isDigit (showGregorian d) of
     ds -> case factorise (read ds :: Integer) of
         [(_, 1)] -> ds ++ " : 今日の日付は素数だね"
-        fs       -> ds ++ " = " ++ showFactors fs ++ " : 今日の日付は合成数で約数は" ++ show n ++ "個あるね"
+        fs       -> ds ++ " = " ++ showFactors fs ++ " : 今日の日付は約数が" ++ show n ++ "個あるね"
             where
                 n = foldr (\ (_,x) a -> succ x * a) 1 fs
 
