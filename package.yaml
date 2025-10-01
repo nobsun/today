@@ -4,7 +4,7 @@ github:              "nobsun/today"
 license:             BSD3
 author:              "Nobuo Yamashita"
 maintainer:          "nobsun@sampou.org"
-copyright:           "Copyright: (c) 2021 Nobuo Yamashita"
+copyright:           "Copyright: (c) 2021-2025 Nobuo Yamashita"
 
 extra-source-files:
 - README.md
